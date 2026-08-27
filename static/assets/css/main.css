@@ -72,7 +72,10 @@ input, select, textarea {
 	appearance: none;
 }
 
-
+.contact-success {
+    margin-bottom: 2em;
+    font-weight: bold;
+}
 
 /* Basic */
 
