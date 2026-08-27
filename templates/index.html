@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Gustavo's website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="static/images/myself.png" alt="" /></span>
+							<h1 id="title">Gustavo Sene</h1>
+							<p>Software Developer</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+
+
+							<li><a href="https://github.com/gustavodev6331" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://linkedin.com/in/gustavo-sene-6468293a4/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt"> Hi, I'm Gustavo. </h2>
+								<p>A passionate software developer focused on building useful applications.</p>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">Check portfolio</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<p>A selection of projects I've built using Python and other technologies.</p>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/gustavodev6331/cafe-api" class="image fit" target="_blank"><img src="static/images/cafe_api.png" alt="" /></a>
+										<header>
+											<h3>Cafe API</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/gustavodev6331/zillow-data-entry-bot" class="image fit" target="_blank"><img src="static/images/zillow_bot.png" alt="" /></a>
+										<header>
+											<h3>Zillow Bot</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/gustavodev6331/blog-users" class="image fit" target="_blank"><img src="static/images/flask_blog.png" alt="" /></a>
+										<header>
+											<h3>Flask Blog</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/gustavodev6331/gym-booking-bot" class="image fit" target="_blank"><img src="static/images/gyom_bot.png" alt="" /></a>
+										<header>
+											<h3>Gym Scheduling Bot</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/gustavodev6331/movie-app" class="image fit" target="_blank"><img src="static/images/movie_database.png" alt="" /></a>
+										<header>
+											<h3>Movie Database</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/gustavodev6331/login-auth" class="image fit" target="_blank"><img src="static/images/flask_auth.png" alt="" /></a>
+										<header>
+											<h3>Flask Authentication</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="static/images/cover_img.png" alt="About Gustavo" /></a>
+
+    						<p>	Hi! I'm Gustavo, a software developer with a strong interest in building practical and useful applications.
+								I started learning programming with Python and have been expanding my skills through hands-on projects involving
+    							web development, APIs, databases, automation, and data analysis.</p>
+							<p> I enjoy the process of solving problems and figuring out how different technologies can work together to create
+								something useful. I'm currently focused on growing as a developer, building projects, and looking for opportunities
+    							where I can continue learning and contribute to a team.</p>
+
+
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p> Feel free to get in touch! Whether you have a question, an opportunity, or simply want to connect,
+    							I'd be happy to hear from you.</p>
+
+							{% with messages = get_flashed_messages() %}
+							  {% if messages %}
+							    {% for message in messages %}
+							      <p class="contact-success">{{ message }}</p>
+							    {% endfor %}
+							  {% endif %}
+							{% endwith %}
+
+							<form method="post" action="{{ url_for('contact') }}">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required/></div>
+									<div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required/></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message" required></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2026 Gustavo Sene.</li><li> All rights reserved.</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
